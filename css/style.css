@@ -22,12 +22,22 @@ body {
     max-width: 1600px;
 }
 
-.gallery img {
-    display: block;
+.gallery-item {
     width: calc((100% - var(--gallery-gap)) / 2);
     min-width: 0;
+    text-align: center;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
     height: auto;
-    max-height: min(80vh, calc(100vh - var(--page-padding) * 2));
-    max-height: min(80svh, calc(100svh - var(--page-padding) * 2));
+    max-height: min(80vh, calc(100vh - var(--page-padding) * 2 - 40px));
+    max-height: min(80svh, calc(100svh - var(--page-padding) * 2 - 40px));
     object-fit: contain;
+}
+
+.gallery-item p {
+    margin: 12px 0 0;
+    line-height: 1.5;
 }
